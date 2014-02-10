@@ -6,7 +6,7 @@
 		# 作業フォルダに設定ファイルを移動します
 		$ cp Gruntfile.js [project folder]
 		$ cp package.json [project folder]
-		$ mv [project folder]
+		$ cd [project folder]
 		
 		# nodeモジュールをインストールします
 		$ npm install
