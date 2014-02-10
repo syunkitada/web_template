@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 		cssmin: {
 			compress: {
 				files: {
-					'sample/css/sample.css': 'sample/css/sample.css',
+					'public/css/public.css': 'public/css/public.css',
 				}
 			}
 		},
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 			build: {
 				options: {
 					'sass-dir': 'src/sass',
-					'css-dir': 'sample/css',
+					'css-dir': 'public/css',
 				}
 			},
 		},
@@ -22,20 +22,20 @@ module.exports = function(grunt) {
 		coffee: {
 			build: {
 				files: {
-					'sample/js/sample.js': ['src/coffee/*.coffee']
+					'public/js/public.js': ['src/coffee/*.coffee']
 				}
 			}
 		},
 		concat: {
 			combine: {
-				src: [ 'src/js/sample_module.js', 'src/js/sample.js' ],
-				dest: 'sample/js/sample.js',
+				src: [ 'src/js/public_module.js', 'src/js/public.js' ],
+				dest: 'public/js/public.js',
 			}
 		},
 		uglify: {
 			compress: {
 				files: {
-					'sample/js/sample.js' : ['src/js/sample_module.js', 'src/js/sample.js']
+					'public/js/public.js' : ['src/js/public_module.js', 'src/js/public.js']
 				}
 			}
 		},
@@ -59,16 +59,17 @@ module.exports = function(grunt) {
 					livereload: true,
 				}
 			},
-			coffee: {
+/*			coffee: {
 				files: ['src/coffee/*.coffee'],
 				tasks: ['coffee'],
 				options: {
 					livereload: true,
 				}
 			},
-			page: {
+*/
+			content: {
 				files: [
-					'sample/*.html',
+					'public/*.html',
 				],
 				options: {
 					livereload: true,
@@ -89,6 +90,6 @@ module.exports = function(grunt) {
 	// タスクの登録
 	// default で登録したタスクは、grunt コマンドで実行される
 	// dist で登録したタスクは、grunt dist　コマンドで実行される (デプロイ用)
-	grunt.registerTask('default', ['compass', 'concat', 'connect', 'watch'])
+	grunt.registerTask('default', ['compass', 'concat', 'watch'])
 	grunt.registerTask('dist', ['compass', 'cssmin', 'concat', 'uglify'])
 };
