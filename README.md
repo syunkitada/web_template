@@ -1,25 +1,28 @@
 # web_template
 
 ## 使い方
-		# nodejsの利用を前提
+``` bash
+# nodejsの利用を前提
 
-		# 作業フォルダに設定ファイルを移動します
-		$ cp Gruntfile.js [project folder]
-		$ cp package.json [project folder]
-		$ cd [project folder]
+# 作業フォルダに設定ファイルを移動します
+$ cp Gruntfile.js [project folder]
+$ cp package.json [project folder]
+$ cd [project folder]
 		
-		# nodeモジュールをインストールします
-		$ npm install
+# nodeモジュールをインストールします
+$ npm install -g grunt-cli
+$ npm install
 		
-		# gruntの設定を行います
-		$ vim Gruntfile.js
-		ガリガリ...
+# gruntの設定を行います
+$ vim Gruntfile.js
+ガリガリ...
 		
-		# 監視　& ビルド & livereload
-		$ grunt
+# 監視　& ビルド & livereload
+$ grunt
 		
-		# ビルド & ファイル圧縮
-		$ grund dist
+# ビルド & ファイル圧縮
+$ grund dist
+```
 
 ## publicフォルダ、srcフォルダについて
 これらは、サンプルです。  
