@@ -62,3 +62,9 @@ node_moduleディレクトリは、削除してもpackage.json があれば、
 		$ npm install
 		
 で、すぐにパッケージをインストールできる。  
+
+
+## TODO gulpといかいうのが出てきたのでこっちもためしてみたい
+できることはgruntとだいたい同じ
+gruntよりも少し効率的？
+http://www.slideshare.net/frontainer/gulp-10
